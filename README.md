@@ -1,46 +1,61 @@
-# Forensic Demo Store — 48436 Digital Forensics
+# Web Analytics and Digital Forensics Investigation
 
-Controlled, static e-commerce simulation for web analytics experiments. No real payments, authentication or personal information collection.
+**UTS | 48436 Digital Forensics**
 
-## Run locally
-Open `index.html` in Chrome, or run `python -m http.server 8000` in this directory and visit `http://localhost:8000`.
+## Project Overview
 
-## Publish on GitHub Pages
-1. Create a new public GitHub repository named `forensic-demo-store`.
-2. Upload `index.html`, `style.css`, `script.js` and `README.md` to the repository root and commit.
-3. Navigate to Settings > Pages. Select Deploy from a branch, `main`, `/ (root)` and Save.
-4. Wait for deployment. The URL typically looks like `https://YOUR-USERNAME.github.io/forensic-demo-store/`.
-5. Open the published site and test all buttons.
+This repository contains a demonstration e-commerce website developed as part of a university investigation into web analytics, user tracking and digital forensics.
 
-## Analytics integration (later step)
-1. Create a GA4 Web data stream for the published URL.
-2. Create a Google Tag Manager Web container and insert the official GTM snippets into `index.html` as instructed by GTM. Publish the changed site.
-3. Create a Google tag in GTM with your GA4 Measurement ID and Initialization - All Pages trigger.
-4. For ecommerce actions, create GTM Custom Event triggers matching: `view_item`, `add_to_cart`, `remove_from_cart`, `view_cart`, `begin_checkout`, `purchase`.
-5. Configure GA4 Event tags using the appropriate event names and ecommerce parameters from `dataLayer`. Preview in GTM before publishing. Events in the dataLayer are **not automatically sent to GA4**.
-6. Install Microsoft Clarity through GTM as a separate tracking integration. Do not install duplicate tracking scripts.
-7. Check local privacy/consent requirements before enabling analytics on a publicly accessible site. Use only consenting group members for testing and avoid real personal data.
+The website provides a controlled testing environment for examining how user interactions generate digital information that can be collected, transmitted and analysed through modern web analytics platforms.
 
-## Controlled test sequence
-1. Open home page; click Explore products.
-2. View details for one product (`view_item`).
-3. Add the product to cart (`add_to_cart`).
-4. Remove one product (`remove_from_cart`) or add another.
-5. Open cart (`view_cart`).
-6. Simulate checkout (`begin_checkout`).
-7. Complete simulated purchase (`purchase`).
+The investigation focuses on understanding the relationship between website activity, business analytics and digital forensic evidence.
 
-## Screenshot checklist
-- Published site and repository files
-- GA4 property and data stream
-- GTM container and preview showing ecommerce custom events
-- GA4 realtime and events reports (after tags are configured)
-- Chrome DevTools network requests and browser cookies
-- Wireshark capture during site visit (HTTPS limits payload visibility)
-- Microsoft Clarity dashboard, recordings, heatmaps
+## Project Objectives
 
-## Research limitations
-- Site uses fictional products and simulated transactions; no real sales or conversion-rate inference.
-- `dataLayer` events are local JavaScript signals until GTM tags are configured.
-- No user login, payment gateway, or backend database.
-- GitHub Pages hosting is public; do not publish secrets, IDs you consider sensitive, or personal data.
+- Investigate how organisations use web analytics to understand customer behaviour and improve website performance.
+- Examine the implementation of website tracking using Google Analytics 4 (GA4) and Google Tag Manager.
+- Explore user behaviour analysis through Microsoft Clarity.
+- Investigate tracking requests, browser storage and network communications using Chrome Developer Tools and Wireshark.
+- Compare the information available through different analytics and forensic tools.
+- Evaluate privacy, security and forensic considerations associated with user tracking.
+
+## Technologies and Tools
+
+| Tool | Purpose |
+|---|---|
+| HTML, CSS and JavaScript | Development of the demonstration website |
+| GitHub Pages | Hosting the testing environment |
+| Google Analytics 4 | Website traffic and event analysis |
+| Google Tag Manager | Configuration and management of tracking tags |
+| Microsoft Clarity | Behavioural analytics, session recordings and heatmaps |
+| Chrome Developer Tools | Examination of browser requests, cookies and storage |
+| Wireshark | Network traffic capture and protocol analysis |
+
+## Demonstration Website
+
+The website simulates a basic online retail environment, allowing controlled interactions such as product browsing, adding items to a shopping cart and completing simulated purchases.
+
+These activities provide test scenarios for examining how website interactions can be represented as analytics events and what associated evidence may be observable through browser and network analysis.
+
+The website is intended solely for educational testing. It does not process real payments or require users to provide genuine personal or financial information.
+
+## Investigation Methodology
+
+The investigation follows four stages:
+
+1. **Environment preparation:** Develop and publish the demonstration website.
+2. **Tracking implementation:** Configure and verify analytics tracking.
+3. **Evidence collection:** Generate controlled user interactions and examine the resulting analytics, browser and network information.
+4. **Analysis and evaluation:** Compare findings across tools and discuss their forensic relevance, security implications and limitations.
+
+## Project Team
+
+- Jamie Wong
+- Kim-Khue Duong
+- Stephen Zachariyah
+
+## Academic Context
+
+This project was developed for **48436 Digital Forensics at the University of Technology Sydney (UTS)**.
+
+The repository is intended for educational and research purposes only. All practical investigations should be conducted within the group's authorised testing environment.
