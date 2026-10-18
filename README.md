@@ -50,12 +50,10 @@ The investigation follows four stages:
 
 ## Project Team
 
-- Jamie Wong
-- Kim-Khue Duong
-- Stephen Zachariyah
+- J.W
+- K.D
+- S.Z
 
 ## Academic Context
 
-This project was developed for **48436 Digital Forensics at the University of Technology Sydney (UTS)**.
-
-The repository is intended for educational and research purposes only. All practical investigations should be conducted within the group's authorised testing environment.
+For assignment use only, its not a real store don't spend your money here, literally nothing will get shipped to you if you do.
